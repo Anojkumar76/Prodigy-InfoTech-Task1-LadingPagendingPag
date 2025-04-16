@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandingPage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==
+    " crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="stars"></div>
+    <header>
+
+
+
+        <nav class="navbar">
+
+
+            <div class="logo">
+                <img src="logo.jpeg" alt="">
+            </div>
+
+
+
+            <div class="anchors-tag" id="menuList">
+                <a href="#">Home</a>
+                <a href="#">Menu</a>
+                <a href="#">About</a>
+                <a href="#">Shop</a>
+            </div>
+
+
+            <div class="icons">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-solid fa-house"></i></a>
+            </div>
+
+
+            <div class="responsive-icons">
+                <i class="fa-solid fa-bars" class="menu-icon" onclick="toggleMenu()"></i>
+                <!-- <i class="fa-solid fa-xmark" class="-icon"></i> -->
+            </div>
+
+        </nav>
+
+
+
+
+        <div class="hero-section">
+            <div class="text-section">
+                <p>Hello Every One , It is a fully responsive landing page . which create by HTML , CSS , and
+                    JAVASCRIPT.
+                    It is my first task of my internship #Prodigy InfoTech . I hope that you all support and
+                    like this project .
+                    Who is a burger shop . Deleniti necessitatibus hic cum neque maxime dolor totam quas ipsam quam
+                    optio distinctio
+                    dignissimos sunt reiciendis, libero harum debitis suscipit molestiae quia adipisci. Eius ipsam
+                    asperiores quisquam vel dolorum voluptate.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam consectetur saepe commodi dolorem
+                    possimus id pariatur debitis dolorum tempora ipsa recusandae provident vitae quae voluptatibus, sed
+                    vero ea minima minus!
+                    Deleniti necessitatibus hic cum neque maxime dolor totam quas ipsam quam optio distinctio
+                    dignissimos sunt reiciendis, libero harum debitis suscipit molestiae quia adipisci. Eius ipsam
+                    asperiores quisquam vel dolorum voluptate.</p>
+                <div class="buttons">
+                    <a href="#" class="btn">Order Now</a>
+                    <a href="#" class="btn">View More</a>
+                </div>
+            </div>
+            <div class="auto-image">
+                <img src="img1.jpeg" alt="">
+
+            </div>
+
+            <div class="burger">
+                <img src="img2.jpeg" alt="" loading="lazy">
+
+                <img src="img3.jpeg" alt="" loading="lazy">
+                <img src="img4.jpeg" alt="" loading="lazy">
+            </div>
+        </div>
+
+    </header>
+    <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+        function toggleMenu() {
+            if (menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "400px";
+            }
+            else {
+                menuList.style.maxHeight = "0px";
+            }
+        }
+
+        function createStars() {
+            const starContainer = document.getElementById("stars");
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = `${Math.random() * windowWidth}px`;
+                star.style.top = `${Math.random() * windowHeight}px`;
+                starContainer.appendChild(star);
+
+            }
+        }
+        window.addEventListener('load', createStars);
+    </script>
+
+</body>
+
+</html>
